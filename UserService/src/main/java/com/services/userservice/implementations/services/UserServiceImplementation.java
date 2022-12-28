@@ -1,4 +1,4 @@
-package com.services.userservice.implementations;
+package com.services.userservice.implementations.services;
 
 import com.services.userservice.entities.User;
 import com.services.userservice.exceptions.ResourceNotFoundException;
