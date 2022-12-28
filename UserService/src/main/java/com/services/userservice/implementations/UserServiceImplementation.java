@@ -1,6 +1,7 @@
 package com.services.userservice.implementations;
 
 import com.services.userservice.entities.User;
+import com.services.userservice.exceptions.ResourceNotFoundException;
 import com.services.userservice.repositories.UserRepository;
 import com.services.userservice.services.UserService;
 import org.springframework.stereotype.Service;
