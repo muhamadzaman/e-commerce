@@ -5,7 +5,6 @@ import com.services.userservice.dtos.UserPostDto;
 import com.services.userservice.entities.User;
 import com.services.userservice.mappers.MyMapper;
 import com.services.userservice.services.UserService;
-import org.apache.catalina.mapper.Mapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

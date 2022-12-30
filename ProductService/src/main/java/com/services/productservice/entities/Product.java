@@ -2,9 +2,11 @@ package com.services.productservice.entities;
 
 import lombok.*;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 
 @NoArgsConstructor
