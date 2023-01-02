@@ -17,44 +17,33 @@ import java.util.stream.Collectors;
 public class CommentController
 {
     private CommentService commentService;
-    private MyMapper myMapper;
-    public CommentController(CommentService commentService, MyMapper myMapper)
-    {
-        this.commentService = commentService;
-        this.myMapper = myMapper;
-    }
+
+    public CommentController(CommentService commentService)
+    { this.commentService = commentService; }
 
     @PostMapping
-    private ResponseEntity<Comment> saveComment(@Valid @RequestBody CommentDto commentDto)
+    private ResponseEntity<CommentDto> saveComment(@Valid @RequestBody CommentDto commentDto)
     {
-        Comment comment = myMapper.commentDtoToComment(commentDto);
-        commentService.createComment(comment);
-        return ResponseEntity.status(HttpStatus.OK).body(comment);
+        CommentDto postCommentDto = commentService.createComment(commentDto);
+        return ResponseEntity.status(HttpStatus.OK).body(postCommentDto);
     }
     @GetMapping
     private ResponseEntity<List<CommentDto>> getAllComments()
     {
-        List<CommentDto> allComments = commentService
-                .readAllComments()
-                .stream().map(comment -> myMapper.commentToCommentDto(comment))
-                .collect(Collectors.toList());
-
+        List<CommentDto> allComments = commentService.readAllComments();
         return ResponseEntity.ok(allComments);
     }
     @GetMapping("/{id}") ResponseEntity<CommentDto> getCommentById(@PathVariable long id)
     {
-        Comment comment = commentService.readCommentById(id);
-        CommentDto commentDto = myMapper.commentToCommentDto(comment);
+        CommentDto commentDto = commentService.readCommentById(id);
         return ResponseEntity.ok(commentDto);
     }
     @PutMapping("/{id}/update")
-    private ResponseEntity<Comment> updateComment(@PathVariable long id, @RequestBody CommentDto commentDto)
+    private ResponseEntity<CommentDto> updateComment(@PathVariable long id, @RequestBody CommentDto commentDto)
     {
-        Comment comment = myMapper.commentDtoToComment(commentDto);
-        comment = commentService.updateCommentById(id, comment);
-        return ResponseEntity.ok(comment);
+        CommentDto updatedComment = commentService.updateCommentById(id, commentDto);
+        return ResponseEntity.ok(updatedComment);
     }
-
     @DeleteMapping("/{id}/delete")
     private void deleteComment(@PathVariable long id)
     { commentService.deleteCommentById(id); }

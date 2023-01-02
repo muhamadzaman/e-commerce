@@ -1,14 +1,15 @@
 package com.services.commentservice.services;
 
+import com.services.commentservice.dtos.CommentDto;
 import com.services.commentservice.entities.Comment;
 
 import java.util.List;
 
 public interface CommentService
 {
-    Comment createComment(Comment comment);
-    List<Comment> readAllComments();
-    Comment readCommentById(long id);
-    Comment updateCommentById(long id, Comment comment);
+    CommentDto createComment(CommentDto commentDto);
+    List<CommentDto> readAllComments();
+    CommentDto readCommentById(long id);
+    CommentDto updateCommentById(long id, CommentDto commentDto);
     void deleteCommentById(long id);
 }

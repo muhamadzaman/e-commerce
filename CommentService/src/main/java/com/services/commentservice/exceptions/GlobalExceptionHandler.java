@@ -1,4 +1,4 @@
-package com.services.productservice.exceptions;
+package com.services.commentservice.exceptions;
 
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import org.springframework.http.HttpHeaders;
@@ -9,13 +9,17 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler
 {
     Map<String,Object> map = new HashMap<>();
+
     @ExceptionHandler(NoSuchElementException.class)
     public ResponseEntity<Map<String, Object>> noSuchElementFoundHandler(NoSuchElementException ex)
     { return ResponseEntity.status(HttpStatus.NOT_FOUND).body(getError(ex.getMessage(), false, HttpStatus.NOT_FOUND)); }

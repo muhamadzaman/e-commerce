@@ -14,16 +14,7 @@ public class MyMapperImplementation implements MyMapper
     { this.modelMapper = modelMapper; }
 
     @Override
-    public CommentDto commentToCommentDto(Comment comment)
-    {
-        CommentDto commentDto = new CommentDto();
-
-        commentDto.setId(comment.getId());
-        commentDto.setBody(commentDto.getBody());
-
-        return commentDto;
-    }
-
+    public CommentDto commentToCommentDto(Comment comment) { return modelMapper.map(comment, CommentDto.class); }
     @Override
     public Comment commentDtoToComment(CommentDto commentDto)
     {
