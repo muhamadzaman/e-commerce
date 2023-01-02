@@ -1,14 +1,15 @@
 package com.services.productservice.services;
 
+import com.services.productservice.dtos.ProductDto;
 import com.services.productservice.entities.Product;
 
 import java.util.List;
 
 public interface ProductService
 {
-    Product createProduct(Product product);
-    List<Product> readAllProducts();
-    Product readProductById(String id);
-    Product updateProductById(String id, Product product);
+    ProductDto createProduct(ProductDto productDto);
+    List<ProductDto> readAllProducts();
+    ProductDto readProductById(String id);
+    ProductDto updateProductById(String id, ProductDto productDto);
     void deleteProductById(String id);
 }

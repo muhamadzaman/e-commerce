@@ -17,42 +17,31 @@ import java.util.stream.Collectors;
 public class ProductController
 {
     private ProductService productService;
-    private MyMapper myMapper;
-    public ProductController(ProductService productService, MyMapper myMapper)
-    {
-        this.productService = productService;
-        this.myMapper = myMapper;
-    }
+    public ProductController(ProductService productService)
+    { this.productService = productService; }
 
     @PostMapping
-    private ResponseEntity<Product> saveProduct(@Valid @RequestBody ProductDto productDto)
+    private ResponseEntity<ProductDto> saveProduct(@Valid @RequestBody ProductDto productDto)
     {
-        Product product = myMapper.productDtoToProduct(productDto);
-        productService.createProduct(product);
-        return ResponseEntity.status(HttpStatus.OK).body(product);
+        ProductDto savedProduct = productService.createProduct(productDto);
+        return ResponseEntity.status(HttpStatus.OK).body(savedProduct);
     }
     @GetMapping
     private ResponseEntity<List<ProductDto>> getAllProducts()
     {
-        List<ProductDto> allProducts = productService
-                .readAllProducts()
-                .stream().map(product -> myMapper.productToProductDto(product))
-                .collect(Collectors.toList());
-
+        List<ProductDto> allProducts = productService.readAllProducts();
         return ResponseEntity.ok(allProducts);
     }
     @GetMapping("/{id}") ResponseEntity<ProductDto> getProductById(@PathVariable String id)
     {
-        Product product = productService.readProductById(id);
-        ProductDto productDto = myMapper.productToProductDto(product);
+        ProductDto productDto = productService.readProductById(id);
         return ResponseEntity.ok(productDto);
     }
     @PutMapping("/{id}/update")
-    private ResponseEntity<Product> updateProduct(@PathVariable String id, @RequestBody ProductDto productDto)
+    private ResponseEntity<ProductDto> updateProduct(@PathVariable String id, @RequestBody ProductDto productDto)
     {
-        Product product = myMapper.productDtoToProduct(productDto);
-        product = productService.updateProductById(id, product);
-        return ResponseEntity.ok(product);
+        ProductDto savedProduct = productService.updateProductById(id, productDto);
+        return ResponseEntity.ok(savedProduct);
     }
 
     @DeleteMapping("/{id}/delete")
