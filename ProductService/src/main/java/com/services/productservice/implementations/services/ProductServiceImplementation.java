@@ -1,6 +1,8 @@
 package com.services.productservice.implementations.services;
 
+import com.services.productservice.dtos.ProductDto;
 import com.services.productservice.entities.Product;
+import com.services.productservice.mappers.MyMapper;
 import com.services.productservice.repositories.ProductRepository;
 import com.services.productservice.services.ProductService;
 import org.springframework.stereotype.Service;
@@ -8,31 +10,53 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class ProductServiceImplementation implements ProductService
 {
     private ProductRepository productRepository;
-    public ProductServiceImplementation(ProductRepository productRepository)
-    { this.productRepository = productRepository; }
+    private MyMapper myMapper;
+    public ProductServiceImplementation(ProductRepository productRepository, MyMapper myMapper)
+    {
+        this.productRepository = productRepository;
+        this.myMapper = myMapper;
+    }
 
     @Override
-    public Product createProduct(Product product)
+    public ProductDto createProduct(ProductDto productDto)
     {
         String id = UUID.randomUUID().toString();
+        Product product = myMapper.productDtoToProduct(productDto);
         product.setId(id);
-        return productRepository.save(product);
+        productRepository.save(product);
+        return myMapper.productToProductDto(product);
     }
     @Override
-    public List<Product> readAllProducts() { return productRepository.findAll(); }
+    public List<ProductDto> readAllProducts()
+    {
+        List<ProductDto> allProducts = productRepository.
+                findAll()
+                .stream()
+                .map(product -> myMapper.productToProductDto(product))
+                .collect(Collectors.toList());
+
+        return allProducts;
+    }
     @Override
-    public Product readProductById(String id) { return findProduct(id); }
+    public ProductDto readProductById(String id)
+    {
+        Product product = findProduct(id);
+        return myMapper.productToProductDto(product);
+    }
     @Override
-    public Product updateProductById(String id, Product newProduct)
+    public ProductDto updateProductById(String id, ProductDto productDto)
     {
         Product oldProduct = findProduct(id);
+        Product newProduct = myMapper.productDtoToProduct(productDto);
         newProduct.setId(oldProduct.getId());
-        return productRepository.save(newProduct);
+        productRepository.save(newProduct);
+        return myMapper.productToProductDto(newProduct);
     }
     @Override
     public void deleteProductById(String id)
