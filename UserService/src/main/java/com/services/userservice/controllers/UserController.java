@@ -2,12 +2,14 @@ package com.services.userservice.controllers;
 
 import com.services.userservice.dtos.UserGetDto;
 import com.services.userservice.dtos.UserPostDto;
+import com.services.userservice.entities.Product;
 import com.services.userservice.entities.User;
 import com.services.userservice.mappers.MyMapper;
 import com.services.userservice.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,10 +20,12 @@ public class UserController
 {
     private UserService userService;
     private MyMapper myMapper;
-    public UserController(UserService userService, MyMapper myMapper)
+    private RestTemplate restTemplate;
+    public UserController(UserService userService, MyMapper myMapper, RestTemplate restTemplate)
     {
         this.userService = userService;
         this.myMapper = myMapper;
+        this.restTemplate = restTemplate;
     }
 
     @PostMapping
@@ -44,7 +48,15 @@ public class UserController
     @GetMapping("/{id}") ResponseEntity<UserGetDto> getUserById(@PathVariable long id)
     {
         User user = userService.readUserById(id);
+
+        //        http://localhost:8082/products/users/2
+        Product[] userProducts = restTemplate.getForObject
+                ("http://localhost:8082/products/users/" + id,
+                        Product[].class);
+
         UserGetDto userDto = myMapper.userToUserGetDto(user);
+
+        userDto.setProducts(List.of(userProducts));
         return ResponseEntity.ok(userDto);
     }
     @PutMapping("/{id}/update")

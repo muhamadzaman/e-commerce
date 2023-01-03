@@ -58,12 +58,23 @@ public class ProductServiceImplementation implements ProductService
         productRepository.save(newProduct);
         return myMapper.productToProductDto(newProduct);
     }
+
+    @Override
+    public List<ProductDto> getAllByUserId(Long userId) {
+        return productRepository
+                .findAllByUserId(userId)
+                .stream()
+                .map(product -> myMapper.productToProductDto(product))
+                .collect(Collectors.toList());
+    }
+
     @Override
     public void deleteProductById(String id)
     {
         Product product = findProduct(id);
         productRepository.deleteById(product.getId());
     }
+
     private Product findProduct(String id)
     {
         Product product = productRepository.findById(id)

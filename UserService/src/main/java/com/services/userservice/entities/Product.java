@@ -1,4 +1,4 @@
-package com.services.productservice.entities;
+package com.services.userservice.entities;
 
 import lombok.*;
 
@@ -12,15 +12,11 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @ToString
-@Entity
-@Table(name = "products")
 public class Product
 {
-    @Id
     private String id;
     private String name;
     private String description;
     private BigDecimal price;
     private long quantity;
-    private long userId;
 }

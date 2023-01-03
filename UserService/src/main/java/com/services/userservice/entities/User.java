@@ -3,6 +3,7 @@ package com.services.userservice.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,5 +23,4 @@ public class User
     private String phoneNumber;
 
     // Image to be Added Yet
-    // Relation with Comments to be Generated Yet
 }

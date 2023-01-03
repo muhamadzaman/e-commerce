@@ -1,6 +1,9 @@
 package com.services.userservice.dtos;
 
+import com.services.userservice.entities.Product;
 import lombok.*;
+
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,4 +17,6 @@ public class UserGetDto
     private String username;
     private String email;
     private String phoneNumber;
+    private List<Product> products;
+
 }

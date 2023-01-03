@@ -1,8 +1,6 @@
 package com.services.productservice.controllers;
 
 import com.services.productservice.dtos.ProductDto;
-import com.services.productservice.entities.Product;
-import com.services.productservice.mappers.MyMapper;
 import com.services.productservice.services.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/products")
@@ -36,6 +33,13 @@ public class ProductController
     {
         ProductDto productDto = productService.readProductById(id);
         return ResponseEntity.ok(productDto);
+    }
+
+    @GetMapping("/users/{userId}")
+    ResponseEntity<List<ProductDto>> getAllByUserId(@PathVariable Long userId)
+    {
+        List<ProductDto> allProducts = productService.getAllByUserId(userId);
+        return ResponseEntity.ok(allProducts);
     }
     @PutMapping("/{id}/update")
     private ResponseEntity<ProductDto> updateProduct(@PathVariable String id, @RequestBody ProductDto productDto)
