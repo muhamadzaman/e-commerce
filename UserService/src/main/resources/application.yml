@@ -8,7 +8,7 @@ spring:
       ddl-auto: update
       show-sql: true
   application:
-    name: USER_SERVICE
+    name: USER-SERVICE
 
 server:
   port: 8081

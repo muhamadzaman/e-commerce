@@ -4,6 +4,7 @@ import com.services.userservice.dtos.UserGetDto;
 import com.services.userservice.dtos.UserPostDto;
 import com.services.userservice.entities.Product;
 import com.services.userservice.entities.User;
+import com.services.userservice.external.services.ProductService;
 import com.services.userservice.mappers.MyMapper;
 import com.services.userservice.services.UserService;
 import org.springframework.http.HttpStatus;
@@ -19,11 +20,14 @@ import java.util.stream.Collectors;
 public class UserController
 {
     private UserService userService;
+    private ProductService productService;
     private MyMapper myMapper;
     private RestTemplate restTemplate;
-    public UserController(UserService userService, MyMapper myMapper, RestTemplate restTemplate)
+    public UserController
+            (UserService userService, ProductService productService, MyMapper myMapper, RestTemplate restTemplate)
     {
         this.userService = userService;
+        this.productService = productService;
         this.myMapper = myMapper;
         this.restTemplate = restTemplate;
     }
@@ -40,7 +44,15 @@ public class UserController
     {
         List<UserGetDto> allUsers = userService
                 .readAllUsers()
-                .stream().map(user -> myMapper.userToUserGetDto(user))
+                .stream()
+                .map(user ->
+                    {
+                        List<Product> products = productService.getProducts(user.getId());
+                        UserGetDto userGetDto = myMapper.userToUserGetDto(user);
+                        userGetDto.setProducts(products);
+                        return userGetDto;
+                    }
+                )
                 .collect(Collectors.toList());
 
         return ResponseEntity.ok(allUsers);
