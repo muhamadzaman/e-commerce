@@ -33,7 +33,15 @@ public class CommentController
         List<CommentDto> allComments = commentService.readAllComments();
         return ResponseEntity.ok(allComments);
     }
-    @GetMapping("/{id}") ResponseEntity<CommentDto> getCommentById(@PathVariable long id)
+    @GetMapping("/product/{productId}")
+    private ResponseEntity<List<CommentDto>> getCommentsByProductId(@PathVariable String productId)
+    {
+        List<CommentDto> allComments = commentService.readCommentsByProductId(productId);
+        return ResponseEntity.ok(allComments);
+    }
+
+    @GetMapping("/{id}")
+    private ResponseEntity<CommentDto> getCommentById(@PathVariable long id)
     {
         CommentDto commentDto = commentService.readCommentById(id);
         return ResponseEntity.ok(commentDto);

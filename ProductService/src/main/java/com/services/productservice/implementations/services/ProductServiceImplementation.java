@@ -1,7 +1,9 @@
 package com.services.productservice.implementations.services;
 
 import com.services.productservice.dtos.ProductDto;
+import com.services.productservice.entities.Comment;
 import com.services.productservice.entities.Product;
+import com.services.productservice.external.services.CommentService;
 import com.services.productservice.mappers.MyMapper;
 import com.services.productservice.repositories.ProductRepository;
 import com.services.productservice.services.ProductService;
@@ -17,10 +19,13 @@ public class ProductServiceImplementation implements ProductService
 {
     private ProductRepository productRepository;
     private MyMapper myMapper;
-    public ProductServiceImplementation(ProductRepository productRepository, MyMapper myMapper)
+    private CommentService commentService;
+    public ProductServiceImplementation
+            (ProductRepository productRepository, MyMapper myMapper, CommentService commentService)
     {
         this.productRepository = productRepository;
         this.myMapper = myMapper;
+        this.commentService = commentService;
     }
 
     @Override
@@ -38,7 +43,14 @@ public class ProductServiceImplementation implements ProductService
         List<ProductDto> allProducts = productRepository.
                 findAll()
                 .stream()
-                .map(product -> myMapper.productToProductDto(product))
+                .map(product ->
+                {
+                    List<Comment> comments = commentService.getComments(product.getId());
+                    ProductDto productDto = myMapper.productToProductDto(product);
+                    productDto.setComments(comments);
+                    return productDto;
+                }
+                )
                 .collect(Collectors.toList());
 
         return allProducts;

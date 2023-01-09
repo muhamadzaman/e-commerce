@@ -42,6 +42,16 @@ public class CommentServiceImplementation implements CommentService
     }
 
     @Override
+    public List<CommentDto> readCommentsByProductId(String productId)
+    {
+        return commentRepository
+                .findAllByProductId(productId)
+                .stream()
+                .map(comment -> myMapper.commentToCommentDto(comment))
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public CommentDto readCommentById(long id)
     {
         Comment comment = findComment(id);
