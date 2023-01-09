@@ -16,6 +16,6 @@ import javax.persistence.Table;
 public class Cart
 {
     @Id
-    private String id;
+    private Long id;
     private Long userId;
 }

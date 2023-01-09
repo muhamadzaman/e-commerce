@@ -3,6 +3,7 @@ package com.services.cartservice.entitites;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -11,7 +12,7 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Table(name = "cart_products")
-public class CartProducts
+public class CartProducts implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
