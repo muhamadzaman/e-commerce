@@ -19,5 +19,5 @@ public class CartProducts implements Serializable
     private Long id;
     private String cartId;
     private Long productId;
-    private Integer quantity;
+    private Long quantity;
 }
