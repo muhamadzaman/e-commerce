@@ -1,9 +1,11 @@
 package com.services.productservice.dtos;
 
+import com.services.productservice.entities.Comment;
 import lombok.*;
 
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -26,4 +28,7 @@ public class ProductDto
     private BigDecimal price;
     @Min(value = 1, message = "Quantity of product should be atleast 1")
     private long quantity;
+    @Min(value = 1, message = "User id must be provided")
+    private long userId;
+    private List<Comment> comments;
 }

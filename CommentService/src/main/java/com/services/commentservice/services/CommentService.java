@@ -12,4 +12,5 @@ public interface CommentService
     CommentDto readCommentById(long id);
     CommentDto updateCommentById(long id, CommentDto commentDto);
     void deleteCommentById(long id);
+    List<CommentDto> readCommentsByProductId(String productId);
 }
