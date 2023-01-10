@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/AhmadFaraz961/e-commerce
+          uri: https://github.com/AhmadFaraz961/config_server_e-com
           clone-on-start: true
           username: AhmadFaraz961
           password: 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
