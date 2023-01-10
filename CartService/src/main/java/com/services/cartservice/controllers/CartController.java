@@ -1,4 +1,4 @@
-package com.services.cartservice.controlles;
+package com.services.cartservice.controllers;
 
 import com.services.cartservice.dtos.GetCartDto;
 import com.services.cartservice.dtos.PostCartDto;
