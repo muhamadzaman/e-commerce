@@ -19,4 +19,6 @@ public class UserGetDto
     private String phoneNumber;
     private List<Product> products;
 
+    private String imageUrl;
+    private String imageId;
 }
