@@ -22,5 +22,6 @@ public class User
     private String email;
     private String phoneNumber;
 
-    // Image to be Added Yet
+    private String imageUrl;
+    private String imageId;
 }

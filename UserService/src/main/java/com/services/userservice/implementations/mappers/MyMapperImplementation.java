@@ -23,6 +23,8 @@ public class MyMapperImplementation implements MyMapper
         userGetDto.setUsername(user.getUsername());
         userGetDto.setEmail(user.getEmail());
         userGetDto.setPhoneNumber(user.getPhoneNumber());
+        userGetDto.setImageUrl(user.getImageUrl());
+        userGetDto.setImageId(user.getImageId());
 
         return userGetDto;
     }
