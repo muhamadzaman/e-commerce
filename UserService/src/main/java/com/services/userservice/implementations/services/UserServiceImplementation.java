@@ -1,22 +1,36 @@
 package com.services.userservice.implementations.services;
 
+import com.services.cloudinaryservice.services.CloudinaryService;
 import com.services.userservice.entities.User;
 import com.services.userservice.exceptions.ResourceNotFoundException;
 import com.services.userservice.repositories.UserRepository;
 import com.services.userservice.services.UserService;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class UserServiceImplementation implements UserService
 {
     private UserRepository userRepository;
-    public UserServiceImplementation(UserRepository userRepository)
-    { this.userRepository = userRepository; }
+    private CloudinaryService cloudinaryService;
+    public UserServiceImplementation(UserRepository userRepository, CloudinaryService cloudinaryService)
+    {
+        this.userRepository = userRepository;
+        this.cloudinaryService  = cloudinaryService;
+    }
 
     @Override
-    public User createUser(User user) { return userRepository.save(user); }
+    public User createUser(User user, MultipartFile uploadFile) throws IOException
+    {
+        Map uploadResult = cloudinaryService.upload(uploadFile);
+        user.setImageId(uploadResult.get("public_id").toString());
+        user.setImageUrl(uploadResult.get("secure_url").toString());
+        return userRepository.save(user);
+    }
     @Override
     public List<User> readAllUsers() { return userRepository.findAll(); }
     @Override
