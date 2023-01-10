@@ -1,5 +1,6 @@
 package com.services.userservice.controllers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.services.userservice.dtos.UserGetDto;
 import com.services.userservice.dtos.UserPostDto;
 import com.services.userservice.entities.Product;
@@ -11,7 +12,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -33,10 +36,12 @@ public class UserController
     }
 
     @PostMapping
-    private ResponseEntity<User> saveUser(@RequestBody UserPostDto userPostDto)
+    private ResponseEntity<User> saveUser(@RequestPart String userPostDto, @RequestPart MultipartFile multipartFile)
+            throws IOException
     {
-        User user = myMapper.userPostDtoToUser(userPostDto);
-        userService.createUser(user);
+        UserPostDto userPostDtoJson = userService.getJson(userPostDto);
+        User user = myMapper.userPostDtoToUser(userPostDtoJson);
+        userService.createUser(user, multipartFile);
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }
     @GetMapping

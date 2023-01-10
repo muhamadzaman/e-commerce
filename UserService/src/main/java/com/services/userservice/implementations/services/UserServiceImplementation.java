@@ -1,6 +1,9 @@
 package com.services.userservice.implementations.services;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.services.cloudinaryservice.services.CloudinaryService;
+import com.services.userservice.dtos.UserPostDto;
 import com.services.userservice.entities.User;
 import com.services.userservice.exceptions.ResourceNotFoundException;
 import com.services.userservice.repositories.UserRepository;
@@ -17,10 +20,15 @@ public class UserServiceImplementation implements UserService
 {
     private UserRepository userRepository;
     private CloudinaryService cloudinaryService;
-    public UserServiceImplementation(UserRepository userRepository, CloudinaryService cloudinaryService)
+    private ObjectMapper objectMapper;
+    public UserServiceImplementation
+            (UserRepository userRepository,
+             CloudinaryService cloudinaryService,
+             ObjectMapper objectMapper)
     {
         this.userRepository = userRepository;
         this.cloudinaryService  = cloudinaryService;
+        this.objectMapper = objectMapper;
     }
 
     @Override
@@ -55,5 +63,11 @@ public class UserServiceImplementation implements UserService
                         ("User with given id is not found on the server. Id found = " + id));
 
         return user;
+    }
+    @Override
+    public UserPostDto getJson(String user) throws JsonProcessingException
+    {
+        UserPostDto userJson = objectMapper.readValue(user, UserPostDto.class);
+        return userJson;
     }
 }

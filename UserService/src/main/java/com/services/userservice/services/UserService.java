@@ -1,5 +1,7 @@
 package com.services.userservice.services;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.services.userservice.dtos.UserPostDto;
 import com.services.userservice.entities.User;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -13,5 +15,6 @@ public interface UserService
     User readUserById(long id);
     User updateUserById(long id, User user);
     void deleteUserById(long id);
+    UserPostDto getJson(String user) throws JsonProcessingException;
 }
 
