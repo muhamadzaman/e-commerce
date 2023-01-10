@@ -51,10 +51,10 @@ public class UserServiceImplementation implements UserService
         return userRepository.save(user);
     }
     @Override
-    public void deleteUserById(long id)
-    {
+    public void deleteUserById(long id) throws IOException {
         User user = findUser(id);
         userRepository.deleteById(user.getId());
+        cloudinaryService.delete(user.getImageId());
     }
     private User findUser(long id)
     {
