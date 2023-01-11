@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: USER-INTERFACE
+  config:
+    import: optional:configserver:http://localhost:8086
+
+server:
+  port: 8087

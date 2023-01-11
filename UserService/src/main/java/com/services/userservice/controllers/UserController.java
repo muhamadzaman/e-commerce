@@ -36,11 +36,10 @@ public class UserController
     }
 
     @PostMapping
-    private ResponseEntity<User> saveUser(@RequestPart String userPostDto, @RequestPart MultipartFile multipartFile)
+    private ResponseEntity<User> saveUser(@RequestPart UserPostDto userPostDto, @RequestPart MultipartFile multipartFile)
             throws IOException
     {
-        UserPostDto userPostDtoJson = userService.getJson(userPostDto);
-        User user = myMapper.userPostDtoToUser(userPostDtoJson);
+        User user = myMapper.userPostDtoToUser(userPostDto);
         userService.createUser(user, multipartFile);
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }

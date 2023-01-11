@@ -64,10 +64,4 @@ public class UserServiceImplementation implements UserService
 
         return user;
     }
-    @Override
-    public UserPostDto getJson(String user) throws JsonProcessingException
-    {
-        UserPostDto userJson = objectMapper.readValue(user, UserPostDto.class);
-        return userJson;
-    }
 }

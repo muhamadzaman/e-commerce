@@ -15,6 +15,5 @@ public interface UserService
     User readUserById(long id);
     User updateUserById(long id, User user);
     void deleteUserById(long id) throws IOException;
-    UserPostDto getJson(String user) throws JsonProcessingException;
 }
 

@@ -1,6 +1,7 @@
 package com.services.userservice.dtos;
 
 import lombok.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @NoArgsConstructor
 @AllArgsConstructor
