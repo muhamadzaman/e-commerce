@@ -29,7 +29,8 @@ public class ProductController
         List<ProductDto> allProducts = productService.readAllProducts();
         return ResponseEntity.ok(allProducts);
     }
-    @GetMapping("/{id}") ResponseEntity<ProductDto> getProductById(@PathVariable String id)
+    @GetMapping("/{id}")
+    ResponseEntity<ProductDto> getProductById(@PathVariable String id)
     {
         ProductDto productDto = productService.readProductById(id);
         return ResponseEntity.ok(productDto);

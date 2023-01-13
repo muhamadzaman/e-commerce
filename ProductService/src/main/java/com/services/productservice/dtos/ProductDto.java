@@ -22,13 +22,11 @@ public class ProductDto
     private String name;
     @NotNull(message = "Description of the product must not be null.")
     @NotBlank(message = "Description of product can't be blank.")
-    @Size(min = 10, max = 50, message = "Name of product should be between 10 and 50 characters.")
+    @Size(min = 10, max = 50, message = "Description of product should be between 10 and 50 characters.")
     private String description;
     @Min(value = 1, message = "Price of product should be atleast 1")
     private BigDecimal price;
     @Min(value = 1, message = "Quantity of product should be atleast 1")
     private long quantity;
-    @Min(value = 1, message = "User id must be provided")
-    private long userId;
     private List<Comment> comments;
 }

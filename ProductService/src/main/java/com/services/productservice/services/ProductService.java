@@ -9,7 +9,7 @@ public interface ProductService
 {
     ProductDto createProduct(ProductDto productDto);
     List<ProductDto> readAllProducts();
-    ProductDto readProductById(String id);
+        ProductDto readProductById(String id);
     ProductDto updateProductById(String id, ProductDto productDto);
 
     List<ProductDto> getAllByUserId(Long userId);
