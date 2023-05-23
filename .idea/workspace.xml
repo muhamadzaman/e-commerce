@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="34b426cf-c669-4e5b-a3f0-9ab125601249" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CentralRepo/src/main/java/com/services/centralrepo/dto/CommentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CentralRepo/src/main/java/com/services/centralrepo/dto/ImageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CentralRepo/src/main/java/com/services/centralrepo/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CentralRepo/src/main/java/com/services/centralrepo/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CheckoutService/src/main/java/com/services/checkoutservice/configurations/PayPalConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CheckoutService/src/main/java/com/services/checkoutservice/controllers/PaypalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CheckoutService/src/main/java/com/services/checkoutservice/services/PaypalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/configuration/MyConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/exception/ExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/mapper/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EmailSender/src/main/java/com/services/emailsender/configs/EmailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EmailSender/src/main/java/com/services/emailsender/services/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EmailSender/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/entity/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/exception/ExceptionHanlder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/implementation/service/ImageServiceImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/implementation/service/ProductServiceImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/mapper/ImageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/mapper/ProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/service/ImageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/config/EmailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/controller/CartsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/controller/PaypalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/dto/CartProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/dto/CommentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/dto/GetCartDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/dto/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/dto/LoginDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/dto/PostCartDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/exception/ExceptionMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/service/CartSessionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/service/SessionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/service/impl/CartSessionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/service/impl/PaypalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/service/impl/SessionServiceImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/cart/show.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/comment/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/fragments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/general/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/order/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/product/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/user/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/user/show.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/user/signIn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/boy4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/out.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/configuration/PasswordEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/configuration/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/exception/ExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/implementation/service/JwtToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/implementation/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/security/AuthEntryPointJwt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/security/AuthTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserService/src/main/resources/static/Images/no_img.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CloudinaryService/src/main/java/com/services/cloudinaryservice/services/CloudinaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/CloudinaryService/src/main/java/com/services/cloudinaryservice/service/CloudinaryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommentService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CommentService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/configurations/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/config/MyConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/dtos/CommentDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/entities/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/exceptions/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/CentralRepo/src/main/java/com/services/centralrepo/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/implementations/mappers/MyMapperImplementation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/implementations/services/CommentServiceImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/implementation/service/CommentServiceImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/mappers/MyMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/repositories/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CommentService/src/main/java/com/services/commentservice/services/CommentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/configurations/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/configuration/MyConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/controllers/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/dtos/ProductDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/entities/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/exceptions/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/external/services/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/external/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/implementations/mappers/MyMapperImplementation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/implementations/services/ProductServiceImplementation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/mappers/MyMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/repository/ImageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/java/com/services/productservice/services/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProductService/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ProductService/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/configs/MyConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/controllers/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/dtos/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/dtos/ProductDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface/src/main/java/com/services/userinterface/services/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/UserInterface/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/products/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/products/new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserInterface/src/main/resources/templates/products/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/configurations/MyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/configuration/MyConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/dtos/UserGetDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/dtos/UserPostDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/entities/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/external/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/external/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/implementations/mappers/MyMapperImplementation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/implementations/services/UserServiceImplementation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/mappers/MyMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserService/src/main/java/com/services/userservice/services/UserService.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2KiOc8XEtPS6a85s9mCn30LnTS9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/dev/Java/e-commerce",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "c453c58d94adbe4bca0581fcd2eef791"
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ApiGateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.services.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="CommentService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.services.commentservice.CommentServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ProductService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.services.productservice.ProductServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserInterfaceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="UserInterface" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.services.userinterface.UserInterfaceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="UserService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.services.userservice.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="34b426cf-c669-4e5b-a3f0-9ab125601249" name="Changes" comment="" />
+      <created>1674454013612</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674454013612</updated>
+      <workItem from="1674454015287" duration="656000" />
+      <workItem from="1674455432037" duration="32000" />
+      <workItem from="1674482487291" duration="14000" />
+      <workItem from="1675964908462" duration="15000" />
+      <workItem from="1681126193310" duration="634000" />
+      <workItem from="1684413508146" duration="1091000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

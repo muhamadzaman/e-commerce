@@ -1,0 +1,12 @@
+server:
+  port: 8088
+
+paypal:
+  mode: sandbox
+  clientId: AZ5-plpnjMxBOi70YeLsLenY6nLHHrDPQpj5JwMPCKUpyixhh7i4tEZUWe_ZIHXoCyZj604G4ISatldM
+  clientSecret: EIhWr5swW9DkU3hrJOD-wFepLl2eM7J49bcT8fM689jkvpQ7V6tImzvMvrPcLKgzEzl9KnzVD_cLLdgO
+
+
+#paypal:
+#  clientId: ${paypal.clientId}
+#  clientSecret: ${paypal.secret}
